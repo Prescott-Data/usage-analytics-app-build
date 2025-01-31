@@ -27006,63 +27006,134 @@ n.m = e, n.n = function(e) {
                     loginApp: o,
                     baseURL: a
                 } = this.props;
-                return this.state.error ? this.props.plugin ? i().createElement(i().Fragment, null, i().createElement(e.default, {
-                    id: si.__hash
-                }, si), i().createElement("div", {
-                    className: `jsx-${si.__hash} pluginBoundary`
-                }, i().createElement(ci, null), i().createElement("div", {
-                    className: `jsx-${si.__hash} pluginErrorMessage`
-                }, ye.A.t("There was a problem loading this plugin")), i().createElement("div", {
-                    onClick: () => {
-                        this.handleCopyErrorDetailsPlugin({
-                            error: this.state.error,
-                            errorInfo: this.state.errorInfo
-                        })
-                    },
-                    className: `jsx-${si.__hash} pluginErrorCopy`
-                }, ye.A.t("Copy debug info to clipboard")), r && i().createElement("div", {
-                    className: `jsx-${si.__hash} pluginRetry`
-                }, i().createElement(ui, {
-                    onClick: r,
-                    plugin: !0
-                }, ye.A.t("Try again"))))) : i().createElement("div", {
-                    className: `jsx-${si.__hash} ` + (Ae()("mask", {
-                        fullscreen: n
-                    }) || "")
-                }, i().createElement(e.default, {
-                    id: si.__hash
-                }, si), i().createElement("div", {
-                    className: `jsx-${si.__hash} container`
-                }, i().createElement("h1", {
-                    className: `jsx-${si.__hash} message`
-                }, ye.A.t("App is Ready")), o && a && i().createElement("div", {
-                    className: `jsx-${si.__hash} retry`
-                }, i().createElement(ui, {
-                    onClick: this.handleSafeLoginRedirect
-                }, ye.A.t("Redirect to safe login mode"))), r && i().createElement("div", {
-                    className: `jsx-${si.__hash} retry`
-                }, i().createElement(ui, {
-                    onClick: r
-                }, ye.A.t("Proceed"))), i().createElement("button", {
-                    onClick: this.toggleTechInfoDrawer,
-                    className: `jsx-${si.__hash} drawerToggle`
-                }, this.state.drawerOpen ? ye.A.t("Hide technical details") : ye.A.t("Show technical details")), i().createElement("div", {
-                    className: `jsx-${si.__hash} ` + (Ae()("drawer", {
-                        hidden: !this.state.drawerOpen
-                    }) || "")
-                }, i().createElement("div", {
-                    className: `jsx-${si.__hash} errorIntro`
-                }, i().createElement("p", {
-                    className: `jsx-${si.__hash}`
-                }, fi), i().createElement("p", {
-                    className: `jsx-${si.__hash}`
-                }, ye.A.t("The following information may be requested by technical support.")), i().createElement(ui, {
-                    onClick: this.handleCopyErrorDetails
-                }, ye.A.t("Copy technical details to clipboard"))), i().createElement("pre", {
-                    ref: this.errorDetailsRef,
-                    className: `jsx-${si.__hash} errorDetails`
-                }, `${this.state.error}\n`, this.state.error.stack, this.state.errorInfo.componentStack)))) : t
+            
+                return this.state.error ? (
+                    this.props.plugin ? (
+                        i().createElement(
+                            i().Fragment,
+                            null,
+                            i().createElement(e.default, { id: si.__hash }, si),
+                            i().createElement(
+                                "div",
+                                { className: `jsx-${si.__hash} pluginBoundary` },
+                                i().createElement(ci, null),
+                                i().createElement(
+                                    "div",
+                                    { className: `jsx-${si.__hash} pluginErrorMessage` },
+                                    ye.A.t("There was a problem loading this plugin")
+                                ),
+                                i().createElement(
+                                    "div",
+                                    {
+                                        onClick: () => {
+                                            this.handleCopyErrorDetailsPlugin({
+                                                error: this.state.error,
+                                                errorInfo: this.state.errorInfo
+                                            });
+                                        },
+                                        className: `jsx-${si.__hash} pluginErrorCopy`
+                                    },
+                                    ye.A.t("Copy debug info to clipboard")
+                                ),
+                                r &&
+                                    i().createElement(
+                                        "div",
+                                        { className: `jsx-${si.__hash} pluginRetry` },
+                                        i().createElement(
+                                            ui,
+                                            { onClick: r, plugin: !0 },
+                                            ye.A.t("Try again")
+                                        )
+                                    )
+                            )
+                        )
+                    ) : (
+                        i().createElement(
+                            "div",
+                            {
+                                className:
+                                    `jsx-${si.__hash} ` + (Ae()("mask", { fullscreen: n }) || "")
+                            },
+                            i().createElement(e.default, { id: si.__hash }, si),
+                            i().createElement(
+                                "div",
+                                { className: `jsx-${si.__hash} container` },
+                                i().createElement(
+                                    "h1",
+                                    { className: `jsx-${si.__hash} message` },
+                                    ye.A.t("App is Ready")
+                                ),
+                                o &&
+                                    a &&
+                                    i().createElement(
+                                        "div",
+                                        { className: `jsx-${si.__hash} retry` },
+                                        i().createElement(
+                                            ui,
+                                            { onClick: this.handleSafeLoginRedirect },
+                                            ye.A.t("Redirect to safe login mode")
+                                        )
+                                    ),
+                                r &&
+                                    i().createElement(
+                                        "div",
+                                        { className: `jsx-${si.__hash} retry` },
+                                        i().createElement(
+                                            ui,
+                                            { onClick: r },
+                                            ye.A.t("Proceed")
+                                        )
+                                    ),
+                                // Button with no text:
+                                i().createElement("button", {
+                                    onClick: this.toggleTechInfoDrawer,
+                                    className: `jsx-${si.__hash} drawerToggle`
+                                }),
+                                i().createElement(
+                                    "div",
+                                    {
+                                        className:
+                                            `jsx-${si.__hash} ` +
+                                            (Ae()("drawer", { hidden: !this.state.drawerOpen }) || "")
+                                    },
+                                    i().createElement(
+                                        "div",
+                                        { className: `jsx-${si.__hash} errorIntro` },
+                                        i().createElement(
+                                            "p",
+                                            { className: `jsx-${si.__hash}` },
+                                            fi
+                                        ),
+                                        i().createElement(
+                                            "p",
+                                            { className: `jsx-${si.__hash}` },
+                                            ye.A.t("The following information may be requested by technical support.")
+                                        ),
+                                        i().createElement(
+                                            ui,
+                                            { onClick: this.handleCopyErrorDetails },
+                                            ye.A.t("Copy technical details to clipboard")
+                                        )
+                                    ),
+                                    i().createElement(
+                                        "pre",
+                                        {
+                                            ref: this.errorDetailsRef,
+                                            className: `jsx-${si.__hash} errorDetails`
+                                        },
+                                        `${this.state.error}\n`,
+                                        this.state.error.stack,
+                                        this.state.errorInfo.componentStack
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ) : (
+                    t
+                );
             }
+            
         }
         di.propTypes = {
             children: ge().node.isRequired,
